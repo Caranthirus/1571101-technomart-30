@@ -10,7 +10,7 @@
 
   <header>
 
-    <a><img src="https://via.placeholder.com/150x100" alt="Логотип"></a>
+    <a href="/"><img src="https://via.placeholder.com/150x100" alt="Логотип"></a>
 
     <form action="https://echo.htmlacademy.ru" method="get">
       <p><input type="search" placeholder="Поиск:"></p>
@@ -27,12 +27,20 @@
     <a href="tel:+78125550555">+7 (812) 555-05-55</a>
     <a href="#">Войти</a>
     <a href="#">Регистрация</a>
+    <div>
+      <a href="#">Равшан Джамшутович</a>
+      <a href="#"></a>
+      <ul>
+        <li><a href="#">Мои заказы</a></li>
+        <li><a href="#">Личный кабинет</a></li>
+      </ul>
+    </div>
 
     <nav>
       <ul>
-        <li><a href="index.html">Главная</a></li>
+        <li><a href="/">Главная</a></li>
         <li><a href="#">Компания</a></li>
-        <li><a href="catalog.html">Каталог</a></li>
+        <li><a href="#">Каталог</a></li>
         <li><a href="#">Новости</a></li>
         <li><a href="#">Спецпредложения</a></li>
         <li><a href="#">Доставка</a></li>
@@ -44,16 +52,16 @@
   <main>
     <ul>
       <li>
-        <a href="index.html">Главная</a>
+        <a href="/">Главная</a>
       </li>
       <li>
-        <a href="catalog.html">Каталог</a>
+        <a href="#">Каталог</a>
       </li>
       <li>
-        <a href="#l">Инструмент</a>
+        <a href="#">Инструмент</a>
       </li>
       <li>
-        <a href="#l">Перфораторы</a>
+        <a>Перфораторы</a>
       </li>
     </ul>
     <h2>Перфораторы</h2>
@@ -63,7 +71,9 @@
         <fieldset>
           <legend>Цена</legend>
           <input type="range" min="0" max="40000">
-          <output>0</output>-<output>30000</output>
+          <input type="number" id="st-number" name="start-number" value="0"
+       min="0" max="30000"> — <input type="number" id="sc-number" name="second-number" value="30000"
+       min="0" max="30000">
         </fieldset>
         <fieldset>
           <legend>Производители:</legend>
@@ -103,8 +113,8 @@
     </section>
     <section>
       <section>
+        <h3>Сортировка:</h3>
         <ul>
-          <li>Сортировка:</li>
           <li><button type="button">По цене</button></li>
           <li><button type="button">По типу</button></li>
           <li><button type="button">По функционалу </button></li>
@@ -229,7 +239,7 @@
       </p>
     </section>
   </main>
-  
+
   <footer>
     <section>
       <a><img src="https://via.placeholder.com/150x100" alt="Логотип"></a>
