@@ -1,0 +1,387 @@
+:root {
+  --basic-red: #EE3643;
+  --basic-green: #63A63E;
+  --basic-grey: #3D546F;
+  --basic-greylight: #C5C5C5;
+  --basic-background: #F1F5F7;
+  --white: #fff;
+  --special-ylellow: #FFBF47;
+  --special-blue: #3BBCE3;
+  --special-lilac: #DC91D8;
+  --special-greenlight: #8ED78F;
+  --special-yellowlight: #FFD180;
+  --success: #5FBB2D;
+  --warning: #FFBF47;
+  --error: #BA2732;
+  --light-grey: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%), #EAEAEA;
+  --special-dark-yellow: #FFC047;
+  --basic-title: #32425C;
+  --dark-blue: #293449;
+  --summer-sky: #F9F5F0;
+  --bookmarks: #161D29;
+  --button-red-hover: #CA2C37;
+  --button-red-active: #BA2732;
+}
+
+.page-body {
+  min-width: 940px;
+  margin: 0;
+  padding: 0;
+  font-family: "Cuprum", Arial, sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 400;
+  color: var(--white);
+  background-color: var(--white);
+}
+
+a {
+  text-decoration: none;
+  color: var(--white);
+}
+
+ul {
+  list-style: none;
+}
+
+/* Header */
+
+.main-header {
+  background-color: rgba(0, 0, 0, 0.0001);
+  background-image: url('../img/top-background.png');
+}
+
+.wrapper {
+  background-color: var(--dark-blue) ;
+}
+
+.main-header-logo {
+  background-color: var(--basic-red);
+  box-shadow: inset 0px -5px 0px rgba(0, 0, 0, 0.24);
+  width: 220px;
+  height: auto;;
+  display: block;
+}
+
+.main-header-logo:active {
+  background-color: var(--error)
+}
+
+.shopping-order {
+  background-color: var(--basic-green);
+}
+
+.shopping-order:hover {
+  background-color: var(--success);
+}
+
+.bookmarks:active {
+  background-color: var(--bookmarks);
+}
+
+ .wrapper a:active {
+  color: rgba(255,255,255, 0.5);
+}
+
+.form-search input[type='search'] {
+  background-color: var(--dark-blue);
+  outline: 0;
+  outline-offset: 0;
+  border: none;
+}
+
+.form-search input[type='search']::-webkit-input-placeholder {
+  color: var(--white);
+}
+
+.form-search input[type='search']::-moz-placeholder {
+  color: var(--white);
+}
+
+.form-search input[type='search']:-moz-placeholder  {
+  color: var(--white);
+}
+
+.form-search input[type='search']:-ms-input-placeholder {
+  color: var(--white);
+}
+
+.form-search input[type='search']:focus {
+  background-color: var(--white);
+}
+
+.header-info {
+  font-size: 21px;
+  line-height: 21px;
+  font-weight: inherit;
+}
+
+.shop-title {
+  font-size: 16px;
+  line-height: 23px;
+  font-style: italic;
+  color: var(--basic-red);
+}
+
+.phone-number {
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 30px;
+  color: var(--basic-red);
+  border: 3px solid #FFFFFF;
+}
+
+.button-header {
+  color: #000;
+}
+
+.button-header:hover {
+  color: var(--basic-red);
+}
+
+.button-header:active {
+  color: var(--basic-greylight);
+}
+
+.main-navigation {
+  background-color: var(--basic-title);
+}
+
+.navigation-items a:hover {
+  background-color:  var(--dark-blue)
+}
+
+.navigation-items a:active {
+  color: rgba(255,255,255, 0.5);
+  background-color:  var(--dark-blue);
+}
+
+/* Opportunities */
+
+.opportunities-info {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 30px;
+}
+
+.opportunities-button {
+  font-size: 14px;
+  line-height: 18px;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.opportunities-button:hover {
+  background-color: rgba(197, 197, 197, 0.3);
+}
+
+.opportunities-button:active {
+  background-color: rgba(169, 169, 169, 0.3);;
+}
+
+.material {
+  background-color: var(--special-ylellow);
+}
+
+.instruments {
+  background-color: var(--special-blue);
+}
+
+.techincs {
+  background-color: var(--special-lilac);
+}
+
+.discounts {
+  background-color: var(--special-greenlight);
+}
+
+.delivery {
+  background-color: var(--special-dark-yellow);
+}
+
+.perforators {
+  background-color: var(--basic-background);
+  background: url(../img/perforator.jpg)  no-repeat;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 36px;
+}
+
+.perforators p {
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.button-main {
+  font-size: 14px;
+  line-height: 18px;
+  background-color: var(--basic-red);
+  border: none;
+  color: var(--white);
+}
+
+.button-main:hover {
+  background-color: var(--button-red-hover);
+}
+
+button-main:active {
+  background-color: var(--button-red-active);
+}
+
+/* Products */
+
+.wrapper-products, .wrapper-manufactures {
+  background-color: var(--summer-sky);
+}
+
+.section-title {
+  font-size: 30px;
+  line-height: 30px;
+  color: var(--basic-title);
+}
+
+.products-item {
+  font-family: "PT Sans", Arial, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 18px;
+}
+
+.products-title {
+  font-size: 18px;
+  line-height: 20px;
+  color: #000;
+}
+
+.products-price {
+  background-color: var(--basic-red);
+}
+
+.buy-button {
+  background-color: var(--basic-green);
+  box-shadow: inset 0px -3px 0px #367315;
+}
+
+.buy-button:hover {
+  background-color: #5FBB2D;
+}
+
+.buy-button:active {
+  background-color: #518534;
+  border: 0;
+}
+
+.bookmarks-button {
+  background: none;
+  color: var(--basic-title);
+  border: 3px solid #63A63E;
+}
+
+.bookmarks-button:hover {
+  border: 3px solid #32425C;
+  background: none;
+}
+
+.bookmarks-button:active {
+  opacity: 0.5;
+}
+
+/* Services */
+
+.wrap {
+  background-color: var(--basic-background);
+}
+
+.wrap p {
+  font-family:  "PT Sans", Arial, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 24px;
+  color: #000;
+}
+
+.dark {
+  color: #000;
+}
+
+.info-list {
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 30px;
+}
+
+.info-list li {
+  box-shadow: 0px 1px 0px #293449, inset 0px 1px 0px #405069;
+  background-color: var(--basic-title);
+  cursor: pointer;
+}
+
+.info-list li:hover {
+  background-color: var(--dark-blue);
+}
+
+.info-list li:active {
+  background-color:  var(--white);
+  box-shadow: 0px 1px 0px #FFFFFF;
+  color: var(--basic-title);;
+}
+
+.info-list .clicked {
+  background: #FFFFFF;
+  box-shadow: 0px 1px 0px #FFFFFF;
+  color: var(--basic-title);;
+}
+
+.additional-information p {
+  font-family:  "PT Sans", Arial, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 24px;
+  color: #000;
+}
+
+.companies-list li {
+  color: #000;
+}
+
+/* Footer  */
+
+.upper-part {
+  background-color: var(--basic-title);
+}
+
+.nav-list a:hover {
+  text-decoration: underline;
+}
+
+.nav-list a:active {
+  opacity: 0.5;
+  text-decoration: none;
+}
+
+
+.special {
+  color: var(--special-yellowlight);
+}
+
+p .special:hover {
+  text-decoration: underline;
+}
+
+p .special:active {
+  color: var(--basic-red);
+  text-decoration: none;
+}
+
+.down-part {
+  background-color: var(--dark-blue);
+  font-size: 16px;
+  line-height: 18px;
+}
+
+
+
+
