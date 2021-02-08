@@ -5,7 +5,8 @@
   <meta charset="UTF-8">
   <title>Каталог — Техномарт</title>
   <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Cuprum:ital,wght@0,400;0,700;1,400&family=PT+Sans:wght@400;700&display=swap"
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cuprum:ital,wght@0,400;0,700;1,400&family=PT+Sans:wght@400;700&display=swap"
     rel="stylesheet">
   <link href="css/normalize.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
@@ -19,52 +20,53 @@
 
   <header class="main-header">
 
-    <div class="site-header-wrapper">
+    <div class="main-header-wrapper">
 
-      <a  href="index.html" class="main-header-logo"><img src="img/logo-header.svg" width="220" height="47" alt="Логотип"></a>
+      <a href="index.html" class="main-header-logo"><img src="img/logo-header.svg" width="220" height="47"
+          alt="Логотип"></a>
 
       <form class="form-search" action="https://echo.htmlacademy.ru" method="get">
         <label>Поиск: <input class="search-area" type="search"></label>
       </form>
       <ul class="shopping-list list-reset">
-        <li><a class="bookmarks" href="#">Закладки: 0</a></li>
-        <li><a class="basket" href="#">Корзина: 10</a></li>
-        <li><a class=' button button--order' href="#">Оформить заказ</a></li>
+        <li><a class="shopping-item shopping-item--bookmarks" href="#">Закладки: 0</a></li>
+        <li><a class="shopping-item shopping-item--basket" href="#">Корзина: 10</a></li>
+        <li><a class="button button--order" href="#">Оформить заказ</a></li>
       </ul>
 
     </div>
 
     <section class="header-info">
 
-    <h1 class="shop-title">Интернет-магазин
-      строительных материалов
-      и инструментов для ремонта</h1>
-    <a class="phone-number" href="tel:+78125550555">+7 (812) 555-05-55</a>
-    <!-- <a href="#">Войти</a>
+      <h1 class="shop-title">Интернет-магазин
+        строительных материалов
+        и инструментов для ремонта</h1>
+      <a class="phone-number" href="tel:+78125550555">+7 (812) 555-05-55</a>
+      <!-- <a href="#">Войти</a>
     <a href="#">Регистрация</a> -->
-    <div class="personal-account">
-      <a class="name" href="#">Равшан Джамшутович</a>
-      <a href="#"></a>
-      <ul class="list-reset">
-        <li><a class="orders" href="#">Мои заказы</a></li>
-        <li><a class="account" href="#">Личный кабинет</a></li>
+      <div class="personal-account">
+        <a class="personal-account-user" href="#">Равшан Джамшутович</a>
+        <a href="#"></a>
+        <ul class="personal-data-list list-reset">
+          <li><a class="personal-data-item" href="#">Мои заказы</a></li>
+          <li><a class="personal-data-item" href="#">Личный кабинет</a></li>
+        </ul>
+      </div>
+
+    </section>
+
+    <nav class="main-navigation">
+      <ul class="navigation-list list-reset">
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="#">Компания</a></li>
+        <li><a>Каталог</a></li>
+        <li><a href="#">Новости</a></li>
+        <li><a href="#">Спецпредложения</a></li>
+        <li><a href="#">Доставка</a></li>
+        <li><a href="#">Контакты</a></li>
       </ul>
-    </div>
-
-  </section>
-
-  <nav class="main-navigation">
-    <ul class="navigation-list list-reset">
-      <li><a href="index.html">Главная</a></li>
-      <li><a href="#">Компания</a></li>
-      <li><a>Каталог</a></li>
-      <li><a href="#">Новости</a></li>
-      <li><a href="#">Спецпредложения</a></li>
-      <li><a href="#">Доставка</a></li>
-      <li><a href="#">Контакты</a></li>
-    </ul>
-  </nav>
-</header>
+    </nav>
+  </header>
 
   <main>
     <ul class="breadcrumbs list-reset">
@@ -83,36 +85,42 @@
     </ul>
     <div class="title-wrapper">
       <h2 class="title">Перфораторы</h2>
-  </div>
+    </div>
     <section class="filters">
       <div class="filters-wrapper">
-      <h3 class="filter-title">Фильтр:</h3>
-    </div>
+        <h3 class="filter-title">Фильтр:</h3>
+      </div>
       <form class="filter" method="get" action="https://echo.htmlacademy.ru">
         <fieldset>
           <legend class="legend-title">Цена</legend>
           <div class="price-wrapper">
-          <input type="range" min="0" max="40000">
-        </div>
-        <div class="price-wrapper"><input type="number" id="st-number" name="start-number" value="0" min="0" max="30000"></div> — <div class="price-wrapper"><input type="number"
-            id="sc-number" name="second-number" value="30000" min="0" max="30000"></div>
+            <input type="range" min="0" max="40000">
+          </div>
+          <div class="price-wrapper"><input type="number" id="st-number" name="start-number" value="0" min="0"
+              max="30000"></div> — <div class="price-wrapper"><input type="number" id="sc-number" name="second-number"
+              value="30000" min="0" max="30000"></div>
         </fieldset>
         <fieldset>
           <legend class="legend-title">Производители:</legend>
           <ul class="list-reset">
-            <li class="filter-option filter-checkbox"><input class="filter-input-checkbox filter-input" type="checkbox" id="filter-bosch" name="BOSCH" checked>
+            <li class="filter-option filter-checkbox"><input class="filter-input-checkbox filter-input" type="checkbox"
+                id="filter-bosch" name="BOSCH" checked>
               <label for="filter-bosch">Bosch</label>
             </li>
-            <li class="filter-option filter-checkbox"><input class="filter-input-checkbox filter-input" type="checkbox" id="filter-interscol" name="interscol">
+            <li class="filter-option filter-checkbox"><input class="filter-input-checkbox filter-input" type="checkbox"
+                id="filter-interscol" name="interscol">
               <label for="filter-interscol">ИНТЕРСКОЛ</label>
             </li>
-            <li class="filter-option filter-checkbox"><input class="filter-input-checkbox filter-input" type="checkbox" id="filter-makita" name="makita" checked>
+            <li class="filter-option filter-checkbox"><input class="filter-input-checkbox filter-input" type="checkbox"
+                id="filter-makita" name="makita" checked>
               <label for="filter-makita">Makita</label>
             </li>
-            <li class="filter-option filter-checkbox"><input class="filter-input-checkbox filter-input" type="checkbox" id="filter-dewalt" name="dewalt">
+            <li class="filter-option filter-checkbox"><input class="filter-input-checkbox filter-input" type="checkbox"
+                id="filter-dewalt" name="dewalt">
               <label for="filter-dewalt">Dewalt</label>
             </li>
-            <li class="filter-option filter-checkbox"><input class="filter-input-checkbox filter-input" type="checkbox" id="filter-hitachi" name="hitachi">
+            <li class="filter-option filter-checkbox"><input class="filter-input-checkbox filter-input" type="checkbox"
+                id="filter-hitachi" name="hitachi">
               <label for="filter-hitachi">Hitachi</label>
             </li>
           </ul>
@@ -121,11 +129,13 @@
           <legend class="legend-title">Питание::</legend>
           <ul class="list-reset">
             <li class="filter-option filter-radio">
-              <input type="radio" class="filter-input-radio filter-input" name="power-battery " id="filter-battery" value="battery" checked>
+              <input type="radio" class="filter-input-radio filter-input" name="power-battery " id="filter-battery"
+                value="battery" checked>
               <label for="filter-battery">Аккумуляторные</label>
             </li>
             <li class="filter-option filter-radio">
-              <input type="radio" class="filter-input-radio filter-input" name="power-network" id="filter-network" value="network">
+              <input type="radio" class="filter-input-radio filter-input" name="power-network" id="filter-network"
+                value="network">
               <label for="filter-network">Сетевые</label>
             </li>
           </ul>
@@ -225,7 +235,7 @@
         </article>
         <article class="product-item">
           <button class="button buy--button" type="button">Купить</button>
-          <button class="button bookmarks--button"  type="button">В закладки</button>
+          <button class="button bookmarks--button" type="button">В закладки</button>
           <a href="#">
             <img src="img/bfg-2000.jpg" width="127" height="112" alt="BFG 2000">
             <h4 class="product-title">Перфоратор BOSCH
