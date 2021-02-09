@@ -8,7 +8,9 @@
   <meta name="keywords" content="Техномарт, все для ремонта, строительные материалы, перфораторы">
   <title>HTML Academy: Техномарт</title>
   <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Cuprum:ital,wght@0,400;0,700;1,400&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cuprum:ital,wght@0,400;0,700;1,400&family=PT+Sans:wght@400;700&display=swap"
+    rel="stylesheet">
   <link href="css/normalize.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
   <link rel="icon" href="favicon.ico">
@@ -22,24 +24,25 @@
   <header class="main-header">
 
     <div class="main-header-wrapper">
+      <div class="container">
+        <div class="logo">
+          <a href="index.html" class="main-logo"><img src="img/logo-header.svg" width="220" height="47"
+              alt="Логотип"></a>
+        </div>
 
-      <div class="logo">
-        <a href="index.html" class="main-logo"><img src="img/logo-header.svg" width="220" height="47"
-            alt="Логотип"></a>
+        <form class="form-search" action="https://echo.htmlacademy.ru" method="get">
+          <label>Поиск: <input class="search-area" type="search"></label>
+        </form>
+        <ul class="shopping-list list-reset">
+          <li><a class="shopping-item shopping-item--bookmarks" href="#">Закладки: 0</a></li>
+          <li><a href="#">Корзина: 0</a></li>
+          <li><a class="button button--order" href="#">Оформить заказ</a></li>
+        </ul>
       </div>
-
-      <form class="form-search" action="https://echo.htmlacademy.ru" method="get">
-        <label>Поиск: <input class="search-area" type="search"></label>
-      </form>
-      <ul class="shopping-list list-reset">
-        <li><a class="shopping-item shopping-item--bookmarks" href="#">Закладки: 0</a></li>
-        <li><a href="#">Корзина: 0</a></li>
-        <li><a class="button button--order" href="#">Оформить заказ</a></li>
-      </ul>
 
     </div>
 
-    <section class="header-info">
+    <section class="header-info container">
 
       <h1 class="shop-title">Интернет-магазин
         строительных материалов
@@ -49,7 +52,7 @@
       <a class="button button--header" href="#">Регистрация</a>
     </section>
 
-    <nav class="main-navigation">
+    <nav class="main-navigation container">
       <ul class="navigation-list list-reset">
         <li><a>Главная</a></li>
         <li><a href="#">Компания</a></li>
@@ -174,20 +177,22 @@
         <h2 class="title title--dark">Сервисы</h2>
         <p>Хороший интернет-магазин отличается от плохого не только ценами!<br>
           Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
-        <section class="info">
-          <ul class="info-list list-reset">
-            <li class="clicked">Доставка</li>
-            <li>Гарантия</li>
-            <li>Кредит</li>
-          </ul>
-        </section>
-        <article class="description">
-          <h3 class="title">Доставка</h3>
-          <p>Мы с удовольствием доставим ваш товар прямо<br>
-            к вашему подъезду совершенно бесплатно!<br>
-            Ведь мы неплохо заработаем,<br>
-            поднимая его на ваш этаж!</p>
-        </article>
+        <div class="additional-services">
+          <section class="info">
+            <ul class="info-list list-reset">
+              <li class="clicked">Доставка</li>
+              <li>Гарантия</li>
+              <li>Кредит</li>
+            </ul>
+          </section>
+          <article class="description">
+            <h3 class="title">Доставка</h3>
+            <p>Мы с удовольствием доставим ваш товар прямо<br>
+              к вашему подъезду совершенно бесплатно!<br>
+              Ведь мы неплохо заработаем,<br>
+              поднимая его на ваш этаж!</p>
+          </article>
+        </div>
       </section>
     </div>
     <section class="additional-information container">
@@ -205,7 +210,7 @@
         </ul>
         <a class="button" href="#">Подробнее о компании</a>
       </section>
-      <section class="contacnts">
+      <section class="contacts">
         <h2 class="title title--dark">Контакты</h2>
         <p>Вы можете забрать товар сами,<br>
           заехав в наш офис:</p>
@@ -215,6 +220,7 @@
     </section>
   </main>
   <footer class="main-footer">
+
     <div class="upper-part">
       <div class="logo">
         <a class="main-logo"><img src="img/logo-header.svg" width="220" height="68" alt="Логотип"></a>
@@ -232,7 +238,9 @@
         <li><a class="footer-nav-link footer-nav-link--yellow" href="#">Инструмент</a></li>
         <li><a class="footer-nav-link footer-nav-link--yellow" href="#">Спецпредложения</a></li>
       </ul>
+
     </div>
+
     <div class="down-part">
 
       <p>&copy;2010–2019 Компания «Техномарт»
@@ -249,7 +257,6 @@
       <p>Разработано —
         <a class=" link-yellow" href="https://htmlacademy.ru">htmlacademy.ru</a>
       </p>
-
     </div>
   </footer>
 </body>
