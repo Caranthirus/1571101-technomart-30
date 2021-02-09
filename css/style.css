@@ -37,6 +37,7 @@
   font-weight: 400;
   color: var(--white);
   background-color: var(--white);
+  box-sizing: border-box;
 }
 
 a {
@@ -59,16 +60,15 @@ a {
   background-color: var(--dark-blue);
 }
 
-.main-header-logo {
+.main-logo {
   background-color: var(--basic-red);
   box-shadow: inset 0px -5px 0px rgba(0, 0, 0, 0.24);
   width: 220px;
   height: auto;
-  ;
   display: block;
 }
 
-.main-header-logo:active {
+.main-logo:active {
   background-color: var(--error)
 }
 
