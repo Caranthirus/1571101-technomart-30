@@ -76,6 +76,11 @@ a {
   background-color: var(--dark-blue);
 }
 
+.container--header {
+  display: grid;
+  grid-template-columns: 220px 1fr 1fr;
+}
+
 .main-logo {
   background-color: var(--basic-red);
   box-shadow: inset 0px -5px 0px rgba(0, 0, 0, 0.24);
@@ -124,6 +129,10 @@ a {
   color: var(--gray);
 }
 
+.form-search {
+  align-self: center;
+}
+
 .search-area {
   background-color: var(--dark-blue);
   outline: 0;
@@ -155,6 +164,8 @@ a {
   font-size: 21px;
   line-height: 21px;
   font-weight: inherit;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
 }
 
 .shop-title {
@@ -170,6 +181,8 @@ a {
   line-height: 30px;
   color: var(--basic-red);
   border: 3px solid var(--white);
+  justify-self: center;
+  align-self: center;
 }
 
 .button--header {
@@ -178,6 +191,9 @@ a {
   font-size: 21px;
   line-height: 21px;
   text-transform: none;
+  align-self: center;
+  width: min-content;
+  justify-self: end;
 }
 
 .button--header:hover {
@@ -300,6 +316,14 @@ a {
 .manufactures-wrapper {
   background-color: var(--summer-sky);
   grid-column: 1 / -1;
+}
+
+.manufactures-list {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
+  align-items: center;
 }
 
 .title {
@@ -439,8 +463,11 @@ a {
 
 /* Footer  */
 
-.upper-part {
+.main-footer {
   background-color: var(--basic-title);
+}
+
+.upper-part {
   display: grid;
   grid-template-columns: 320px 1fr;
 }
@@ -479,6 +506,9 @@ a {
   background-color: var(--dark-blue);
   font-size: 16px;
   line-height: 18px;
+}
+
+.container-footer {
   display: grid;
   grid-template-columns: repeat(4, 1fr)
 }
@@ -492,6 +522,15 @@ a {
 }
 
 /* Catalog-header */
+
+.header--catalog {
+  display: grid;
+  grid-template-columns:  repeat(3, 1fr);;
+}
+
+.personal-account {
+  justify-self: end;
+}
 
 .personal-account-user {
   font-size: 21px;
@@ -522,11 +561,28 @@ a {
   color: var(--basic-greylight);
 }
 
-.basket {
+.shopping-item--basket {
   background-color: var(--basic-red);
 }
 
 /* Breadcrumbs-catalog, sorting */
+
+.catalog--container {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  align-content: start;
+  grid-gap: 20px;
+}
+
+.title-wrapper {
+  background-color: var(--basic-background);
+  grid-column: 1/ -1;
+}
+
+.title--catalog {
+  display: block;
+  padding: 29px 0 30px 29px;
+}
 
 .breadcrumbs a,
 .filter-title,
@@ -543,6 +599,10 @@ a {
 .price-wrapper,
 .sorting {
   background-color: var(--light-pink);
+}
+
+.sorting {
+  margin-bottom: 28px;
 }
 
 .sorting h3 {
@@ -576,6 +636,12 @@ button:active {
   color: var(--basic-red);
 }
 
+.products {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+}
+
 /* Filter , pagination  */
 
 .filters {
@@ -590,6 +656,7 @@ button:active {
   line-height: 30px;
   font-weight: bold;
 }
+
 
 .button--filter,
 .pagination-item {
@@ -626,6 +693,7 @@ button:active {
 
 .perforators-info {
   background-image: url('../img/top-background.png');
+  grid-column: 1 / -1;
 }
 
 .perforators-info h2 {
