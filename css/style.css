@@ -78,7 +78,7 @@ a {
 
 .container--header {
   display: grid;
-  grid-template-columns: 220px 1fr 1fr;
+  grid-template-columns: 220px 270px 450px ;
 }
 
 .main-logo {
