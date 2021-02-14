@@ -26,7 +26,7 @@
     <div class="main-header-wrapper">
       <div class="container container--header">
         <div class="logo">
-          <a href="index.html" class="main-logo"><img src="img/logo-header.svg" width="220" height="47"
+          <a href="index.html" class="main-logo"><img src="img/logo-header.svg" width="107" height="17"
               alt="Логотип"></a>
         </div>
 
@@ -48,8 +48,10 @@
         строительных материалов
         и инструментов для ремонта</h1>
       <a class="phone-number" href="tel:+78125550555">+7 (812) 555-05-55</a>
-      <a class=" button button--header" href="#">Войти</a>
+      <div class="flex-wrap">
+      <a class=" button button--header button--in" href="#">Войти</a>
       <a class="button button--header" href="#">Регистрация</a>
+    </div>
     </section>
 
     <nav class="main-navigation container">
@@ -67,7 +69,7 @@
 
   <main>
     <section class="opportunities container">
-      <h2>Наши услуги</h2>
+      <h2 class="hidden">Наши услуги</h2>
       <article class="advantages advantages--material">
         <h3 class="opportunities-info">Материалы </h3>
         <a class="button opportunities--button" href="#">На любой вкус</a>
@@ -91,13 +93,13 @@
       <article class="advantages advantages--perforators">
         <h3>Перфораторы</h3>
         <p>Настоящие мужские игрушки</p>
-        <a class="button" href="catalog.html">Открыть каталог</a>
+        <a class="button button--catalog" href="catalog.html">Открыть каталог</a>
       </article>
     </section>
     <section class="popular-products container">
       <div class="products-wrapper">
         <h2 class="title">Популярные товары</h2>
-        <a class="button" href="catalog.html">Все популярные товары</a>
+        <a class="button button--title" href="catalog.html">Все популярные товары</a>
       </div>
       <article class="product-item">
         <button class="button buy--button" type="button">Купить</button>
@@ -143,31 +145,31 @@
     <section class="manufactures container">
       <div class="manufactures-wrapper">
         <h2 class="title">Популярные производители:</h2>
-        <a class="button" href="#">Все производители</a>
+        <a class="button button--title" href="#">Все производители</a>
       </div>
       <ul class="manufactures-list list-reset">
-        <li>
+        <li class="manufactures-item">
           <a href="#"><img src="img/bosch.png" width="126" height="37" alt="Bosch"></a>
         </li>
-        <li>
+        <li class="manufactures-item">
           <a href="#"><img src="img/Makita.png" width="123" height="40" alt="makita"></a>
         </li>
-        <li>
+        <li class="manufactures-item">
           <a href="#"><img src="img/dewalt.png" width="146" height="44" alt="dewalt"></a>
         </li>
-        <li>
+        <li class="manufactures-item">
           <a href="#"><img src="img/interscol.png" width="200" height="76" alt="interscol"></a>
         </li>
-        <li>
+        <li class="manufactures-item">
           <a href="#"><img src="img/Hitachi.png" width="169" height="31" alt="hitachi"></a>
         </li>
-        <li>
+        <li class="manufactures-item">
           <a href="#"><img src="img/LG.png" width="121" height="73" alt="LG"></a>
         </li>
-        <li>
+        <li class="manufactures-item">
           <a href="#"><img src="img/AEG.png" width="151" height="96" alt="AEG"></a>
         </li>
-        <li>
+        <li class="manufactures-item">
           <a href="#"><img src="img/Metabo.png" width="204" height="69" alt="metabo"></a>
         </li>
       </ul>
@@ -187,7 +189,7 @@
               </ul>
             </section>
             <article class="description">
-              <h3 class="title">Доставка</h3>
+              <h3 class="title title--description">Доставка</h3>
               <p>Мы с удовольствием доставим ваш товар прямо<br>
                 к вашему подъезду совершенно бесплатно!<br>
                 Ведь мы неплохо заработаем,<br>
@@ -199,7 +201,7 @@
     </div>
     <section class="additional-information container">
       <section class="tecnhomart-info">
-        <h2 class="title title--dark">Компания "ТЕХНОМАРТ" </h2>
+        <h2 class="title title--dark title--add">Компания "ТЕХНОМАРТ" </h2>
         <p>Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для<br>
           ремонта и строительства не оставит равнодушными любителей сэкономить на гастарбайтерах.</p>
 
@@ -210,14 +212,14 @@
           <li>Автротрейдинг</li>
           <li>ЖелДорЭкспедиция</li>
         </ul>
-        <a class="button" href="#">Подробнее о компании</a>
+        <a class="button button--add" href="#">Подробнее о компании</a>
       </section>
       <section class="contacts">
-        <h2 class="title title--dark">Контакты</h2>
+        <h2 class="title title--dark title--add">Контакты</h2>
         <p>Вы можете забрать товар сами,<br>
           заехав в наш офис:</p>
         <!-- Здесь будет карта  -->
-        <button class="button" type="button">Заблудились? Напишите нам!</button>
+        <button class="button button--add" type="button">Заблудились? Напишите нам!</button>
       </section>
     </section>
   </main>
@@ -225,7 +227,7 @@
 
     <div class="upper-part container">
       <div class="logo">
-        <a class="main-logo"><img src="img/logo-header.svg" width="220" height="68" alt="Логотип"></a>
+        <a class="main-logo footer--logo"><img src="img/logo-header.svg" width="137" height="22" alt="Логотип"></a>
       </div>
       <address>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
         +7 (812) 555-05-55</address>
