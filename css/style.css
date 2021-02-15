@@ -79,7 +79,7 @@ a {
 
 .container--header {
   display: grid;
-  grid-template-columns: 220px 270px 450px ;
+  grid-template-columns: 220px 270px 450px;
   height: 42px;
   margin-bottom: 40px;
 }
@@ -130,7 +130,7 @@ a {
   padding-left: 20px;
   padding-bottom: 8px;
   padding-top: 13px;
-  margin-left: -43px;
+  /* margin-left: -43px; */
 }
 
 .button--order:hover {
@@ -257,21 +257,18 @@ a {
 
 .navigation-list {
   display: flex;
-  padding-bottom: 20px;
-  padding-top: 16px;
   flex-wrap: wrap;
+  padding-left: 53px;
 }
 
 .navigation-list li {
   margin-right: 56px;
 }
 
-.navigation-list li:first-child {
-  margin-left: 53px;
-}
-
-.navigation-list li:last-child {
-  margin-right: 53px;
+.navigation-item {
+  display: block;
+  padding-top: 16px;
+  padding-bottom: 20px;
 }
 
 .navigation-list li:hover {
@@ -333,7 +330,7 @@ a {
 }
 
 .advantages {
-  height: 123px;
+  min-height: 123px;
 }
 
 .advantages--material {
@@ -383,13 +380,11 @@ a {
   padding: 0;
   margin-top: 5px;
   padding-left: 24px;
-}
-
-.advantages--perforators p {
   font-weight: 400;
   font-size: 18px;
   line-height: 24px;
 }
+
 
 .button--catalog {
   font-weight: normal;
@@ -468,13 +463,30 @@ a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: relative;
+}
+
+.hidden-button {
+  position: absolute;
+  top: 38px;
+  left: 41px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.product-item:hover .hidden-button {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.product-item:hover .catalog-image {
+  opacity: 0;
 }
 
 .product-item img {
   max-width: 184px;
   max-height: 164px;
 }
-
 
 .product-title {
   font-size: 18px;
@@ -488,6 +500,15 @@ a {
 
 .product-price {
   background-color: var(--basic-red);
+  width: 122px;
+  padding: 0;
+  margin: 0 auto;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+  margin-bottom: 21px;
+  display: block;
+  border-radius: 5px;
 }
 
 .buy--button,
@@ -528,20 +549,8 @@ a {
   opacity: 0.5;
 }
 
-.product-price {
-  width: 122px;
-  padding: 0;
-  margin: 0 auto;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  text-align: center;
-  margin-bottom: 21px;
-  display: block;
-  border-radius: 5px;
-}
-
 .manufactures-list li {
-  width:  218px;
+  width: 218px;
   height: 145px;
   background: #FFFFFF;
   border: 1px solid #EAEAEA;
@@ -554,6 +563,10 @@ a {
 }
 
 /* Services */
+
+.services {
+  padding-bottom: 99px;
+}
 
 .additional-services {
   display: grid;
@@ -584,12 +597,17 @@ a {
   padding-left: 0px;
   padding-top: 64px;
   padding-bottom: 0;
-  margin-bottom: 25px;;
+  margin-bottom: 25px;
+  ;
 }
 
 .services p {
   margin-top: 0;
   margin-bottom: 70px;
+}
+
+.description p {
+  margin-bottom: 0;
 }
 
 .info-list {
@@ -711,6 +729,7 @@ a {
 .upper-part {
   display: grid;
   grid-template-columns: 321px 1fr;
+  padding-bottom: 54px;
 }
 
 .upper-part address {
@@ -734,7 +753,6 @@ a {
 
 .footer-nav li:nth-child(6) {
   margin-left: 22px;
-  padding-bottom: 41px;
 }
 
 .footer-nav li:nth-child(5),
@@ -802,15 +820,21 @@ a {
 }
 
 .social {
-  justify-self: center;
+  justify-content: center;
   display: flex;
+  flex-wrap: wrap;
+  max-width: 240px;
 }
 
 /* Catalog-header */
 
 .header--catalog {
   display: grid;
-  grid-template-columns:  repeat(3, 1fr);;
+  grid-template-columns: 228px repeat(2, 1fr);
+}
+
+.phone--catalog {
+  margin-left: 92px;
 }
 
 .personal-account {
@@ -832,6 +856,16 @@ a {
   color: var(--basic-greylight);
 }
 
+.personal-data-list {
+  display: flex;
+  padding-left: 44px;
+}
+
+.personal-data-list li {
+  margin-top: 7px;
+  margin-right: 31px;
+}
+
 .personal-data-item {
   font-size: 16px;
   line-height: 18px;
@@ -848,7 +882,14 @@ a {
 
 .shopping-item--basket {
   background-color: var(--basic-red);
+  display: block;
+  padding-left: 35px;
+  margin-right: -43px;
+  width: 101px;
+  padding-bottom: 8px;
+  padding-top: 13px;
 }
+
 
 /* Breadcrumbs-catalog, sorting */
 
@@ -857,6 +898,26 @@ a {
   grid-template-columns: 220px 1fr;
   align-content: start;
   grid-gap: 20px;
+  padding-top: 21px;
+  padding-bottom: 59px;
+}
+
+.breadcrumbs {
+  display: flex;
+  position: relative;
+  padding-left: 56px;
+}
+
+.breadcrumbs li:not(:first-child) {
+  margin-right: 40px;
+  position: relative;
+}
+
+.breadcrumbs--main {
+  position: absolute;
+  margin-right: 0;
+  opacity: 0;
+  pointer-events: none;
 }
 
 .title-wrapper {
@@ -880,6 +941,13 @@ a {
   text-transform: uppercase;
 }
 
+.filter-title,
+.sorting {
+  padding-left: 18px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
 .filters-wrapper,
 .price-wrapper,
 .sorting {
@@ -888,12 +956,21 @@ a {
 
 .sorting {
   margin-bottom: 28px;
+  display: flex;
+  padding-left: 18px;
 }
 
 .sorting h3 {
+  padding: 0;
+  margin: 0;
   font-weight: 400;
   font-size: 13px;
   line-height: 18px;
+  margin-right: 140px;
+}
+
+.main-info {
+  padding-top: 13px;
 }
 
 button,
@@ -903,18 +980,30 @@ button:active {
   outline: none
 }
 
+.sorting-list {
+  display: flex;
+  align-items: center;
+}
+
+.sorting-item {
+  margin-right: 65px;
+}
+
 .sorting-item button {
   color: var(--basic-greylight);
   text-transform: uppercase;
+  border-bottom: 1px dashed var(--basic-red);
 }
-
 
 .sorting-item--current button {
   color: var(--basic-red);
+  border-bottom: none;
 }
 
 .sorting-item button:hover {
   color: var(--dark);
+  text-decoration: none;
+  border: none;
 }
 
 .sorting-item button:active {
@@ -936,12 +1025,36 @@ button:active {
   color: var(--dark);
 }
 
+.filter fieldset {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 42px;
+  border: none;
+}
+
+.filter fieldset:nth-child(2) {
+  margin-bottom: 46px;
+}
+
+.filter-option {
+  margin-bottom: 21px;
+}
+
+.filter-option:last-child,
+.filter-option:nth-child(5) {
+  margin-bottom: 0;
+}
+
 .legend-title {
   font-size: 17px;
   line-height: 30px;
   font-weight: bold;
+  margin-bottom: 19px;
 }
 
+.legend-title:first-child {
+  margin-bottom: 10px;
+}
 
 .button--filter,
 .pagination-item {
@@ -949,6 +1062,10 @@ button:active {
   border: 1px solid #E5E5E5;
   color: var(--dark);
   text-transform: uppercase;
+}
+
+.button--filter {
+  width: 219px;
 }
 
 .button--filter:hover {
@@ -959,6 +1076,19 @@ button:active {
 .button--filter:active {
   border: 1px solid var(--basic-red);
   background-color: var(--white);
+}
+
+.pagination-list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  margin-top: 48px;
+}
+
+.pagination-item {
+  margin-right: 10px;
+  padding: 10px 15px;
+  border-radius: 2px;
 }
 
 .pagination-item-current {
@@ -979,6 +1109,7 @@ button:active {
 .perforators-info {
   background-image: url('../img/top-background.png');
   grid-column: 1 / -1;
+  padding-bottom: 68px;
 }
 
 .perforators-info h2 {

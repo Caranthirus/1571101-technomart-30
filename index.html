@@ -49,20 +49,20 @@
         и инструментов для ремонта</h1>
       <a class="phone-number" href="tel:+78125550555">+7 (812) 555-05-55</a>
       <div class="flex-wrap">
-      <a class=" button button--header button--in" href="#">Войти</a>
-      <a class="button button--header" href="#">Регистрация</a>
-    </div>
+        <a class=" button button--header button--in" href="#">Войти</a>
+        <a class="button button--header" href="#">Регистрация</a>
+      </div>
     </section>
 
     <nav class="main-navigation container">
       <ul class="navigation-list list-reset">
-        <li><a>Главная</a></li>
-        <li><a href="#">Компания</a></li>
-        <li><a href="catalog.html">Каталог</a></li>
-        <li><a href="#">Новости</a></li>
-        <li><a href="#">Спецпредложения</a></li>
-        <li><a href="#">Доставка</a></li>
-        <li><a href="#">Контакты</a></li>
+        <li><a class="navigation-item">Главная</a></li>
+        <li><a class="navigation-item" href="#">Компания</a></li>
+        <li><a class="navigation-item" href="catalog.html">Каталог</a></li>
+        <li><a class="navigation-item" href="#">Новости</a></li>
+        <li><a class="navigation-item" href="#">Спецпредложения</a></li>
+        <li><a class="navigation-item" href="#">Доставка</a></li>
+        <li><a class="navigation-item" href="#">Контакты</a></li>
       </ul>
     </nav>
   </header>
@@ -102,40 +102,48 @@
         <a class="button button--title" href="catalog.html">Все популярные товары</a>
       </div>
       <article class="product-item">
-        <button class="button buy--button" type="button">Купить</button>
-        <button class="button bookmarks--button" type="button">В закладки</button>
+        <div class="hidden-button">
+          <button class="button buy--button" type="button">Купить</button>
+          <button class="button bookmarks--button" type="button">В закладки</button>
+        </div>
         <a href="catalog.html">
-          <img src="img/bfg-9000.jpg" width="184" height="164" alt="BFG 9000">
+          <img class="catalog-image" src="img/bfg-9000.jpg" width="184" height="164" alt="BFG 9000">
           <h3 class="product-title">Перфоратор BOSCH<br>
             BFG 9000</h3>
           <span class="product-price">22500 Р.</span>
         </a>
       </article>
       <article class="product-item">
-        <button class="button buy--button" type="button">Купить</button>
-        <button class="button bookmarks--button" type="button">В закладки</button>
+        <div class="hidden-button">
+          <button class="button buy--button" type="button">Купить</button>
+          <button class="button bookmarks--button" type="button">В закладки</button>
+        </div>
         <a href="catalog.html">
-          <img src="img/bfg-3000.jpg" width="127" height="112" alt="BFG 3000">
+          <img class="catalog-image" src="img/bfg-3000.jpg" width="127" height="112" alt="BFG 3000">
           <h3 class="product-title">Перфоратор BOSCH<br>
             BFG 3000</h3>
           <span class="product-price">15500 Р.</span>
         </a>
       </article>
       <article class="product-item">
-        <button class="button buy--button" type="button">Купить</button>
-        <button class="button bookmarks--button" type="button">В закладки</button>
+        <div class="hidden-button">
+          <button class="button buy--button" type="button">Купить</button>
+          <button class="button bookmarks--button" type="button">В закладки</button>
+        </div>
         <a href="catalog.html">
-          <img src="img/bfg-6000.jpg" width="144" height="128" alt="BFG 6000">
+          <img class="catalog-image" src="img/bfg-6000.jpg" width="144" height="128" alt="BFG 6000">
           <h3 class="product-title">Перфоратор BOSCH<br>
             BFG 6000</h3>
           <span class="product-price">22500 Р.</span>
         </a>
       </article>
       <article class="product-item">
-        <button class="button buy--button" type="button">Купить</button>
-        <button class="button bookmarks--button" type="button">В закладки</button>
+        <div class="hidden-button">
+          <button class="button buy--button" type="button">Купить</button>
+          <button class="button bookmarks--button" type="button">В закладки</button>
+        </div>
         <a href="catalog.html">
-          <img src="img/bfg-2000.jpg" width="127" height="112" alt="BFG 2000">
+          <img class="catalog-image" src="img/bfg-2000.jpg" width="127" height="112" alt="BFG 2000">
           <h3 class="product-title">Перфоратор BOSCH<br>
             BFG 2000</h3>
           <span class="product-price">12 500 Р.</span>
@@ -257,7 +265,7 @@
           <li class="social-item"><a class="social-link" href="#"><img src="img/icons/icon-fb.svg" alt="Фейсбук"></a>
           </li>
           <li class="social-item"><a class="social-link" href="#"><img src="img/icons/icon-insta.svg"
-                alt="Инстагрм"></a>
+                alt="Инстаграм"></a>
           </li>
         </ul>
         <p>Обратная связь:
