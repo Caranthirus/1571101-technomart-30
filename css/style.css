@@ -211,15 +211,33 @@ a {
   margin-bottom: 45px;
 }
 
+.contacts-info {
+  justify-self: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contacts-info--catalog {
+  margin-left: 75px;
+}
+
 .phone-number {
   font-weight: bold;
   font-size: 21px;
   line-height: 30px;
   color: var(--basic-red);
   border: 3px solid var(--white);
-  justify-self: center;
   width: 151px;
   padding: 7px 42px 8px 71px;
+}
+
+.header-address {
+  font-size: 14px;
+  line-height: 24px;
+  color: var(--basic-title);
+  margin-top: 3px;
 }
 
 .flex-wrap {
@@ -355,12 +373,21 @@ a {
 
 .advantages--perforators {
   background-color: var(--basic-greylight);
-  background: url(../img/perforator.jpg) no-repeat;
   font-weight: bold;
   font-size: 36px;
   line-height: 36px;
   grid-column: 1 / -2;
   grid-row: 3 / 5;
+  position: relative;
+  z-index: 1;
+}
+
+.advantages--perforators img {
+  position: absolute;
+  object-fit: contain;
+  z-index: -1;
+  top: 0;
+  left: 0;
 }
 
 .advantages--perforators h3 {
@@ -681,8 +708,6 @@ a {
 .companies-list li:last-child {
   margin-bottom: 20px;
 }
-
-
 
 .contacts p {
   margin-bottom: 32px;
