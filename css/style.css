@@ -85,7 +85,7 @@ a {
 .container--header {
   display: grid;
   grid-template-columns: 220px 270px 450px;
-  margin-bottom: 42px;
+  margin-bottom: 44px;
   color: var(--white);
   font-weight: normal;
 }
@@ -98,7 +98,7 @@ a {
   position: relative;
 }
 
-.main-logo:active {
+.main-logo[href]:active {
   background-color: var(--error);
 }
 
@@ -113,7 +113,7 @@ a {
   left: 0;
 }
 
-.main-logo:active::after {
+.main-logo[href]:active::after {
   background-color: var(--error);
   box-shadow: inset 0 -5px 0 rgba(0, 0, 0, 0.24);
 }
@@ -150,8 +150,8 @@ a {
 
 .shopping-item {
   position: relative;
-  padding-left: 45px;
-  padding-right: 31px;
+  padding-left: 48px;
+  padding-right: 28px;
   padding-bottom: 9px;
   padding-top: 10px;
   display: block;
@@ -164,7 +164,7 @@ a {
   height: 15px;
   background: url('../img/icons/icon-cart.svg') no-repeat 0 0;
   top: 13px;
-  left: 23px;
+  left: 26px;
   opacity: 0.3;
 }
 
@@ -225,7 +225,8 @@ a {
 .search-area {
   background-color: var(--dark-blue);
   width: 270px;
-  padding: 14px 38px 9px 38px;
+  padding: 0 38px 0 42px;
+  height: 43px;
   outline: 0;
   outline-offset: 0;
   border: none;
@@ -235,8 +236,8 @@ a {
 .search-label {
   position: absolute;
   opacity: 0.3;
-  top: 13px;
-  left: 13px;
+  top: 12px;
+  left: 17px;
 }
 
 .search-area:hover+.search-label {
@@ -381,7 +382,7 @@ a {
 .main-navigation {
   background-color: var(--basic-title);
   box-shadow: inset 0 -5px 0 #293449;
-  margin-bottom: 65px;
+  margin-bottom: 63px;
 }
 
 .navigation-list {
@@ -473,7 +474,7 @@ a {
   width: 70px;
   height: 90px;
   background: url('../img/new_catalog.png') no-repeat 0 0;
-  top: -20px;
+  top: -24px;
   right: 0;
 }
 
@@ -598,6 +599,10 @@ a {
 .button--title {
   margin-right: 14px;
   text-align: center;
+}
+
+.button--manufactures {
+  margin-right: 16px;
 }
 
 .manufactures {
@@ -1131,7 +1136,7 @@ a {
 }
 
 .container-footer p:first-child {
-  max-width: 227px;
+  max-width: 231px;
 }
 
 .container-footer p {
