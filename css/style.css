@@ -142,18 +142,12 @@ a {
   font-size: 18px;
   line-height: 24px;
   text-transform: none;
-  padding-right: 16px;
-  padding-left: 20px;
-  padding-bottom: 11px;
-  padding-top: 13px;
+  padding: 13px 16px 11px 20px;
 }
 
 .shopping-item {
   position: relative;
-  padding-left: 48px;
-  padding-right: 28px;
-  padding-bottom: 9px;
-  padding-top: 10px;
+  padding: 10px 28px 9px 48px;
   display: block;
 }
 
@@ -183,10 +177,7 @@ a {
 
 .shopping-item--bookmarks {
   display: block;
-  padding-bottom: 9px;
-  padding-top: 9px;
-  padding-left: 43px;
-  padding-right: 24px;
+  padding: 9px 24px 9px 43px;
   position: relative;
 }
 
@@ -290,6 +281,7 @@ a {
   color: var(--basic-red);
   padding: 0 0 0 30px;
   margin: 0 0 45px 0;
+  font-weight: 400;
 }
 
 .contacts-info {
@@ -394,10 +386,7 @@ a {
 
 .navigation-item {
   display: block;
-  padding-top: 16px;
-  padding-bottom: 20px;
-  padding-left: 28px;
-  padding-right: 28px;
+  padding: 16px 28px 20px 28px;
 }
 
 .navigation-list li:hover {
@@ -531,17 +520,75 @@ a {
 }
 
 .advantages--perforators {
-  background-color: var(--basic-greylight);
+  grid-column: 1 / -2;
+  grid-row: 2 / 4;
+  padding: 0;
+}
+
+.slider {
+  position: relative;
+}
+
+.slider-nav {
+  z-index: 1;
+  position: absolute;
+  top: 50%;
+  padding: 0;
+  transform: translateY(-16px);
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+.slider-nav:hover {
+  opacity: 0.6;
+}
+
+.slider-nav:focus {
+  opacity: 0.3;
+}
+
+.slider-nav--prev {
+  left: 24px;
+}
+
+.slider-nav--next {
+  right: 21px;
+}
+
+.slider-item {
+  position: relative;
+  display: none;
+  min-height: 216px;
+  padding: 23px 24px 27px 24px;
   font-weight: bold;
   font-size: 36px;
   line-height: 36px;
-  grid-column: 1 / -2;
-  grid-row: 2 / 4;
-  position: relative;
+  background-color: var(--basic-greylight);
   z-index: 1;
 }
 
-.advantages--perforators img {
+.black-wrap {
+  background-color: var(--dark);
+  width: 100%;
+  height: 105px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.2;
+}
+
+.slider-item--info {
+  padding-bottom: 24px;
+  z-index: 10;
+}
+
+.slider-item--active {
+  display: flex;
+  flex-direction: column;
+}
+
+.slider-item img {
   position: absolute;
   object-fit: contain;
   z-index: -1;
@@ -551,14 +598,14 @@ a {
   height: 100%;
 }
 
-.advantages--perforators h3 {
+.slider-item h3 {
   padding: 0;
   margin: 0;
   font-size: 36px;
   text-transform: uppercase;
 }
 
-.advantages--perforators p {
+.slider p {
   margin: 5px 0 0 0;
   padding: 0;
   font-weight: 400;
@@ -566,13 +613,64 @@ a {
   line-height: 24px;
 }
 
+.slider-dots{
+  z-index: 1;
+  position: absolute;
+  max-width: 150px;
+  left: 50%;
+  bottom: 36px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateX(-50%);
+}
+
+.slider-dots-item {
+  line-height: 1;
+  margin-right: 10px;
+}
+
+.slider-dots-item:last-child{
+  margin-right: 0;
+}
+
+.slider-dots-button {
+  position: relative;
+  display: block;
+  padding: 0;
+  width: 10px;
+  height: 10px;
+  border: none;
+  border-radius: 50%;
+  background-color: var(--white);
+}
+
+.slider-dots-button::after {
+  content: "";
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 6px;
+  height: 6px;
+  background-color: var(--basic-red);
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  border: none;
+}
+
+.slider-dots-button--active::after {
+  opacity: 1;
+}
 
 .button--catalog {
   font-weight: normal;
   display: block;
   text-align: center;
-  margin-top: 113px;
+  margin-top: auto;
 }
+
 
 /* Products */
 
@@ -591,9 +689,11 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 27px;
-  padding-bottom: 25px;
-  padding-left: 28px;
+  padding: 23px 0 25px 28px;
+}
+
+.manufactures-wrapper {
+  padding-top: 25px;
 }
 
 .button--title {
@@ -602,7 +702,7 @@ a {
 }
 
 .button--manufactures {
-  margin-right: 16px;
+  margin-right: 18px;
 }
 
 .manufactures {
@@ -895,9 +995,7 @@ a {
 
 .title--dark {
   color: var(--dark);
-  padding-left: 0;
-  padding-top: 58px;
-  padding-bottom: 0;
+  padding: 62px 0 0 0;
   margin-bottom: 25px;
 }
 
@@ -933,7 +1031,7 @@ a {
   background-color: var(--basic-title);
   cursor: pointer;
   margin: 0;
-  padding: 14px 0 17px 22px;
+  padding: 14px 0 18px 22px;
 }
 
 .title--description {
@@ -988,7 +1086,7 @@ a {
 }
 
 .tecnhomart-info p:first-of-type {
-  margin-bottom: 30px;
+  margin-bottom: 28px;
 }
 
 .contacts {
@@ -1039,7 +1137,7 @@ a {
 .contacts .button {
   width: 300px;
   display: block;
-  margin-top: 23px;
+  margin-top: 20px;
   text-align: center;
 }
 
@@ -1109,6 +1207,7 @@ a {
   opacity: 0.5;
   text-decoration: none;
 }
+
 
 .footer-nav-link--yellow,
 .link-yellow {
@@ -1377,9 +1476,7 @@ a {
 .title-wrapper {
   background-color: var(--basic-background);
   grid-column: 1/ -1;
-  padding-top: 29px;
-  padding-bottom: 30px;
-  padding-left: 28px;
+  padding: 29px 0 30px 28px;
 }
 
 .title--catalog {
@@ -1401,9 +1498,7 @@ a {
 
 .filter-title,
 .sorting {
-  padding-left: 18px;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding: 10px 0 10px 18px;
   margin: 0;
 }
 
@@ -1571,9 +1666,7 @@ button {
   background-color: var(--light-pink);
   border-radius: 5px;
   margin-bottom: 9px;
-  padding-top: 39px;
-  padding-right: 20px;
-  padding-left: 20px;
+  padding: 39px 20px 0 20px;
   position: relative;
 }
 
@@ -1898,7 +1991,6 @@ fieldset:nth-child(2) .legend-title {
   background-color: var(--modal-button);
   width: 100%;
   box-sizing: border-box;
-  padding-bottom: 10px;
   display: flex;
   padding: 37px 80px;
   margin: 0;
