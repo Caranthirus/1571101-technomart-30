@@ -158,9 +158,17 @@
             <li class="slider-item slider-item--active">
               <img src="img/perforator.jpg" alt="Мужчина с перфоратором" width="620" height="266">
               <div class="black-wrap"></div>
-              <div class="slider-item--info">
+              <div class="slider-item--info slider-item--current">
                 <h3>Перфораторы</h3>
                 <p>Настоящие мужские игрушки</p>
+              </div>
+              <a class="button button--catalog" href="catalog.html">Открыть каталог</a>
+            </li>
+            <li class="slider-item">
+              <img src="img/drill.jpg" alt="Мужчина с дрелью" width="620" height="266">
+              <div class="slider-item--info">
+                <h3>Дрели</h3>
+                <p>Соседям на радость!</p>
               </div>
               <a class="button button--catalog" href="catalog.html">Открыть каталог</a>
             </li>
@@ -171,7 +179,7 @@
                 aria-label="Первый слайд"></button>
             </li>
             <li class="slider--dots-item">
-              <button type="button" class="slider-dots-button " aria-label="Второй слайд"></button>
+              <button type="button" class="slider-dots-button" aria-label="Второй слайд"></button>
             </li>
           </ul>
           <button type="button" class="slider-nav slider-nav--prev" aria-label="Назад">
@@ -302,18 +310,29 @@
           <div class="additional-services">
             <section class="info">
               <ul class="info-list list-reset">
-                <li class="clicked">Доставка</li>
-                <li>Гарантия</li>
-                <li>Кредит</li>
+                <li class=" info-item"><a class="clicked" href="#" data-tab="1">Доставка</a></li>
+                <li class="info-item"><a href="#" data-tab="2">Гарантия</a></li>
+                <li class="info-item"><a href="#" data-tab="3">Кредит</a></li>
               </ul>
             </section>
-            <article class="description">
+            <div class="description-info">
+            <article class="description description-delivery description--active" data-tab="1">
               <h3 class="title title--description">Доставка</h3>
               <p>Мы с удовольствием доставим ваш товар прямо<br>
                 к вашему подъезду совершенно бесплатно!<br>
                 Ведь мы неплохо заработаем,<br>
                 поднимая его на ваш этаж!</p>
             </article>
+            <article class="description description--guarantee" data-tab="2">
+              <h3 class="title title--description">Гарантия</h3>
+              <p>Если купленный у нас товар поломается или заискрит,<br> а также в случае пожара, спровоцированного его<br> возгоранием, вы всегда можете быть уверены в нашей<br> гарантии. Мы обменяем сгоревший товар на новый.<br> Дом уж восстановите как-нибудь сами.</p>
+            </article>
+            <article class="description description--credit" data-tab="3">
+              <h3 class="title title--description">Кредит</h3>
+              <p>Залезть в долговую яму стало проще!<br>Кредитные консультанты придут вам на помощь.</p>
+              <button class="button button-credit">Отправить заявку</button>
+            </article>
+          </div>
           </div>
         </section>
       </div>
@@ -337,8 +356,11 @@
         <h2 class="title title--dark title--add">Контакты</h2>
         <p>Вы можете забрать товар сами,<br>
           заехав в наш офис:</p>
-        <img src="img/map.png" width="300" height="158" alt="Карта">
-        <button class="button" type="button">Заблудились? Напишите нам!</button>
+          <a class="map-link">
+            <img src="img/map.png" width="300" height="158" alt="Большая Конюшенная, ул.19">
+          </a>
+
+        <button class="button button--write-us" type="button">Заблудились? Напишите нам!</button>
       </section>
     </section>
   </main>
@@ -405,15 +427,15 @@
       <fieldset class="login-area">
         <p class="letter-item">
           <label class="name" for="name-area">Ваше имя:</label>
-          <input type="text" placeholder="Имя Фамилия" name="name" id="name-area">
+          <input type="text" class="user-name" placeholder="Имя Фамилия" name="name" id="name-area">
         </p>
         <p class="letter-item">
           <label class="mail" for="mail-area">Ваш e-mail:</label>
-          <input type="email" placeholder="email@example.com" name="mail" id="mail-area">
+          <input type="email" class="letter-mail" placeholder="email@example.com" name="mail" id="mail-area">
         </p>
         <p class="letter-item">
           <label class="text" for="text-area">Текст письма:</label>
-          <input type="email" placeholder="В свободной форме" name="text" id="text-area">
+          <input type="text"class="letter-text" placeholder="В свободной форме" name="text" id="text-area">
         </p>
       </fieldset>
       <fieldset class="button-area">
@@ -440,6 +462,24 @@
       </svg>
     </button>
   </section>
+  <section class="modal modal-order">
+    <div class="top-area">
+      <h2>Товар добавлен в корзину!</h2>
+    </div>
+    <div class="bottom-area">
+      <a class="button" href="#">Оформить заказ</a>
+      <button type="button" class="continue-shopping">Продолжить покупки</button>
+    </div>
+    <button class="modal-close close-map order-close" type="button" aria-label="Закрыть">
+      <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M13.2729 10.5L20.6949 3.07799C21.0839 2.68899 21.0839 2.05299 20.6949 1.66399L19.3359 0.304995C18.9469 -0.0840054 18.3109 -0.0840054 17.9219 0.304995L10.4999 7.72699L3.07793 0.304995C2.68893 -0.0840054 2.05293 -0.0840054 1.66393 0.304995L0.304934 1.66399C-0.0840664 2.05299 -0.0840664 2.68899 0.304934 3.07799L7.72693 10.5L0.305934 17.922C-0.0830664 18.311 -0.0830664 18.947 0.305934 19.336L1.66493 20.695C2.05393 21.084 2.68993 21.084 3.07893 20.695L10.5009 13.273L17.9229 20.695C18.3119 21.084 18.9479 21.084 19.3369 20.695L20.6959 19.336C21.0849 18.947 21.0849 18.311 20.6959 17.922L13.2729 10.5Z"
+          fill="#EE3643" />
+      </svg>
+    </button>
+  </section>
+
+  <script src="js/login.js"></script>
 </body>
 
 </html>
