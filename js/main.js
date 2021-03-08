@@ -8,7 +8,7 @@ const letterMail = document.querySelector(".letter-mail");
 const letterText = document.querySelector("letter-text");
 const letterName = document.querySelector(".user-name");
 
-let isStorageSuppor = true;
+let isStorageSupport = true;
 let storage = "";
 
 try {
@@ -86,13 +86,13 @@ window.addEventListener("keydown", function (evt) {
 
 // Order
 
-const buyLink  = document.querySelectorAll(".buy--button");
+const buyLinks  = document.querySelectorAll(".buy--button");
 const orderPopup = document.querySelector(".modal-order");
 const orderClose = document.querySelector(".order-close");
 const shopping = document.querySelector(".continue-shopping");
 
-for (i = 0; i <= buyLink.length - 1; ++i) {
-	buyLink[i].addEventListener("click", function (event) {
+for (i = 0; i <= buyLinks.length - 1; ++i) {
+	buyLinks[i].addEventListener("click", function (event) {
 		event.preventDefault(event);
 		orderPopup.classList.add("modal-show");
 	})
@@ -117,18 +117,19 @@ window.addEventListener("keydown", function (evt) {
   }
 });
 
+console.log(buyLink);
+
 // Services
 
 const infoButtons = document.querySelectorAll(".info-list a");
-const sectionsInfo = document.querySelectorAll(".description");
 
 infoButtons.forEach(function(item) {
   item.addEventListener("click", function(evt) {
     evt.preventDefault();
     const id = this.getAttribute("data-tab");
-    content = document.querySelector('.description[data-tab="'+id+'"]');
-    activeButton = document.querySelector(".clicked");
-    activeContent = document.querySelector(".description--active");
+    const content = document.querySelector('.description[data-tab="'+id+'"]');
+    const activeButton = document.querySelector(".clicked");
+    const activeContent = document.querySelector(".description--active");
 
     activeButton.classList.remove("clicked");
     item.classList.add("clicked");
