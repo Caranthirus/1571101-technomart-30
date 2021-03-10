@@ -17,47 +17,50 @@ try {
   isStorageSupport = false;
 }
 
-letterLink.addEventListener("click", function(evt) {
-  evt.preventDefault();
-  letterPopup.classList.add("modal-show");
 
-  if (storage) {
-    letterName.value = storage;
-    letterMail.focus();
-  } else {
-    letterName.focus();
-  }
+if (letterLink) {
+  letterLink.addEventListener("click", function(evt) {
+    evt.preventDefault();
+    letterPopup.classList.add("modal-show");
 
-});
+    if (storage) {
+      letterName.value = storage;
+      letterMail.focus();
+    } else {
+        letterName.focus();
+      }
+    });
 
-letterClose.addEventListener("click", function(evt) {
-  evt.preventDefault();
-  letterPopup.classList.remove("modal-show");
-  letterPopup.classList.remove("modal-error");
-});
 
-letterForm.addEventListener("submit", function(evt) {
- if(!letterMail.value || !letterName.value || !letterText.value) {
-  evt.preventDefault();
-  letterPopup.classList.remove("modal-error");
-  letterPopup.offsetWidth = letterPopup.offsetWidth;
-  letterPopup.classList.add("modal-error");
- } else {
-   if (isStorageSupport) {
-    localStorage.setItem("name", letterName.value);
+  letterClose.addEventListener("click", function(evt) {
+    evt.preventDefault();
+    letterPopup.classList.remove("modal-show");
+    letterPopup.classList.remove("modal-error");
+  });
+
+  letterForm.addEventListener("submit", function(evt) {
+   if(!letterMail.value || !letterName.value || !letterText.value) {
+    evt.preventDefault();
+    letterPopup.classList.remove("modal-error");
+    letterPopup.offsetWidth = letterPopup.offsetWidth;
+    letterPopup.classList.add("modal-error");
+   } else {
+     if (isStorageSupport) {
+      localStorage.setItem("name", letterName.value);
+     }
    }
- }
-});
+  });
 
-window.addEventListener("keydown", function (evt) {
-  if (evt.keyCode === 27) {
-    if (letterPopup.classList.contains("modal-show")) {
-      evt.preventDefault();
-      letterPopup.classList.remove("modal-show");
-      letterPopup.classList.add("modal-error");
+  window.addEventListener("keydown", function (evt) {
+    if (evt.keyCode === 27) {
+      if (letterPopup.classList.contains("modal-show")) {
+        evt.preventDefault();
+        letterPopup.classList.remove("modal-show");
+        letterPopup.classList.add("modal-error");
+      }
     }
-  }
-});
+  });
+}
 
 // Map
 
@@ -65,24 +68,28 @@ const mapPopup = document.querySelector(".modal-map");
 const mapClose = document.querySelector(".close-map");
 const mapLink = document.querySelector(".map-link");
 
-mapLink.addEventListener("click", function (evt) {
-  evt.preventDefault();
-  mapPopup.classList.add("modal-show");
-});
 
-mapClose.addEventListener("click", function (evt) {
-  evt.preventDefault();
-  mapPopup.classList.remove("modal-show");
-});
+if(mapLink) {
+  mapLink.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    mapPopup.classList.add("modal-show");
+  });
 
-window.addEventListener("keydown", function (evt) {
-  if (evt.keyCode === 27) {
-    if (mapPopup.classList.contains("modal-show")) {
-      evt.preventDefault();
-      mapPopup.classList.remove("modal-show");
+
+  mapClose.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    mapPopup.classList.remove("modal-show");
+  });
+
+  window.addEventListener("keydown", function (evt) {
+    if (evt.keyCode === 27) {
+      if (mapPopup.classList.contains("modal-show")) {
+        evt.preventDefault();
+        mapPopup.classList.remove("modal-show");
+      }
     }
-  }
-});
+  });
+}
 
 // Order
 
@@ -116,8 +123,6 @@ window.addEventListener("keydown", function (evt) {
     }
   }
 });
-
-console.log(buyLink);
 
 // Services
 
