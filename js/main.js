@@ -56,7 +56,7 @@ if (letterLink) {
       if (letterPopup.classList.contains("modal-show")) {
         evt.preventDefault();
         letterPopup.classList.remove("modal-show");
-        letterPopup.classList.add("modal-error");
+        letterPopup.classList.remove("modal-error");
       }
     }
   });
@@ -73,6 +73,10 @@ if(mapLink) {
   mapLink.addEventListener("click", function (evt) {
     evt.preventDefault();
     mapPopup.classList.add("modal-show");
+
+    if(mapPopup.classList.contains("modal-show")) {
+      mapClose.focus()
+    }
   });
 
 
@@ -102,6 +106,10 @@ for (i = 0; i <= buyLinks.length - 1; ++i) {
 	buyLinks[i].addEventListener("click", function (event) {
 		event.preventDefault(event);
 		orderPopup.classList.add("modal-show");
+
+    if(orderPopup.classList.contains("modal-show")) {
+      orderClose.focus()
+    }
 	})
 };
 

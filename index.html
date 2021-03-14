@@ -12,7 +12,7 @@
     href="https://fonts.googleapis.com/css2?family=Cuprum:ital,wght@0,400;0,700;1,400&family=PT+Sans:wght@400;700&display=swap"
     rel="stylesheet">
   <link href="css/normalize.css" rel="stylesheet">
-  <link href="css/style.css" rel="stylesheet">
+  <link href="css/style.min.css" rel="stylesheet">
   <link rel="icon" href="favicon.ico">
   <link rel="icon" href="img/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="img/icons-16.png">
@@ -218,7 +218,7 @@
         </div>
         <div class="product-item--content">
           <div class="product--info-block">
-            <p class="product--title">Перфоратор BOSCH BFG 9000</p>
+            <h3 class="product--title">Перфоратор BOSCH BFG 9000</h3>
           </div>
           <p class="product--old-price">32500 Р.</p>
           <p class="product--price">25500 Р.</p>
@@ -234,7 +234,7 @@
         </div>
         <div class="product-item--content">
           <div class="product--info-block">
-            <p class="product--title">Перфоратор BOSCH BFG 3000</p>
+            <h3 class="product--title">Перфоратор BOSCH BFG 3000</h3>
           </div>
           <p class="product--old-price">22500 Р.</p>
           <p class="product--price">15500 Р.</p>
@@ -250,7 +250,7 @@
         </div>
         <div class="product-item--content">
           <div class="product--info-block">
-            <p class="product--title">Перфоратор BOSCH BFG 6000</p>
+            <h3 class="product--title">Перфоратор BOSCH BFG 6000</h3>
           </div>
           <p class="product--old-price">30500 Р.</p>
           <p class="product--price">25500 Р.</p>
@@ -266,7 +266,7 @@
         </div>
         <div class="product-item--content">
           <div class="product--info-block">
-            <p class="product--title">Перфоратор BOSCH BFG 2000</p>
+            <h3 class="product--title">Перфоратор BOSCH BFG 2000</h3>
           </div>
           <p class="product--old-price">22500 Р.</p>
           <p class="product--price">12500 Р.</p>
@@ -313,6 +313,7 @@
             Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
           <div class="additional-services">
             <section class="info">
+              <h2 class="hidden">Наши преимущества</h2>
               <ul class="info-list list-reset">
                 <li class=" info-item"><a class="clicked" href="#" data-tab="1">Доставка</a></li>
                 <li class="info-item"><a href="#" data-tab="2">Гарантия</a></li>
@@ -342,6 +343,7 @@
       </div>
     </div>
     <section class="additional-information container">
+      <h2 class="hidden">Дополнительная ифнормация</h2>
       <section class="tecnhomart-info">
         <h2 class="title title--dark title--add">Компания «ТЕХНОМАРТ» </h2>
         <p>Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для<br>
@@ -364,7 +366,7 @@
             <img src="img/map.png" width="300" height="158" alt="Большая Конюшенная, ул.19">
           </a>
 
-        <button class="button button--write-us" type="button">Заблудились? Напишите нам!</button>
+        <a href="#" class="button button--write-us">Заблудились? Напишите нам!</a>
       </section>
     </section>
   </main>
@@ -421,12 +423,13 @@
         <p>Обратная связь:
           <a class=" link-yellow" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a></p>
         <p>Разработано —
-          <a class=" link-yellow" href="https://htmlacademy.ru">htmlacademy.ru</a>
+          <a class=" link-yellow" href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a>
         </p>
       </div>
     </div>
   </footer>
   <section class="modal modal-letter">
+    <h2 class="hidden">Напишите нам!</h2>
     <form class="letter" method="post" action="https://echo.htmlacademy.ru">
       <fieldset class="login-area">
         <p class="letter-item">
@@ -439,7 +442,7 @@
         </p>
         <p class="letter-item">
           <label class="text" for="text-area">Текст письма:</label>
-          <input type="text"class="letter-text" placeholder="В свободной форме" name="text" id="text-area">
+          <input type="text" class="letter-text" placeholder="В свободной форме" name="text" id="text-area">
         </p>
       </fieldset>
       <fieldset class="button-area">
@@ -455,6 +458,7 @@
     </button>
   </section>
   <section class="modal modal-map">
+    <h2 class="hidden">Карта</h2>
     <iframe
       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3361.2372446287577!2d30.317070276354084!3d59.938719202869095!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1614085565907!5m2!1sru!2sru"
       width="943" height="444" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
@@ -483,7 +487,7 @@
     </button>
   </section>
 
-  <script src="js/main.js"></script>
+  <script src="js/main.min.js"></script>
 </body>
 
 </html>
