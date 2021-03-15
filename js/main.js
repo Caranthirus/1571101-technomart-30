@@ -153,23 +153,97 @@ infoButtons.forEach(function(item) {
   });
 });
 
-// Slider
+const slider = document.querySelector('.slider');
 
-// const sliderItems = document.querySelectorAll(".slider-item");
-// const sliderDots = document.querySelectorAll(".slider-dots-button");
-// const navNext = document.querySelector(".slider-nav--next");
-// const navPrev = document.querySelector(".slider-nav--prev");
-// let idx = 0
+if (slider) {
+  let activeSlideIndex = 0;
+  const slides = Array.from(slider.querySelectorAll('.slider-item'));
+  const dots = Array.from(slider.querySelectorAll('.slider-dots-button'));
+  const sliderArrowPrev = slider.querySelector('.slider-nav--prev');
+  const sliderArrowNext = slider.querySelector('.slider-nav--next');
 
-// navNext.addEventListener("click", moveLeft);
-// function moveLeft(){
-//   sliderItems[idx].classList.remove("slider-item--active");
-//   sliderItems[++idx].classList.add("slider-item--active");
-// }
+  const disabledArrow = () => {
+    if (Number(activeSlideIndex) === 0) {
+      sliderArrowNext.removeAttribute('disabled');
+      sliderArrowPrev.setAttribute('disabled', '');
+    } else if (Number(activeSlideIndex) === slides.length - 1) {
+      sliderArrowPrev.removeAttribute('disabled');
+      sliderArrowNext.setAttribute('disabled', '');
+    } else {
+      sliderArrowPrev.removeAttribute('disabled');
+      sliderArrowNext.removeAttribute('disabled');
+    }
+  };
 
-// navPrev.addEventListener('click', moveRight);
-// function moveRight(){
-//   sliderItems[idx].classList.remove("slider-item--active");
-//   sliderItems[--idx].classList.add("slider-item--active");
-// }
+  disabledArrow();
+
+  const setPrevSlide = () => {
+    if (activeSlideIndex > 0) {
+      activeSlideIndex--;
+      disabledArrow();
+
+      slides[activeSlideIndex + 1].classList.remove('slider-item--active');
+      slides[activeSlideIndex].classList.add('slider-item--active');
+      dots[activeSlideIndex + 1].classList.remove('slider-dots-button--active');
+      dots[activeSlideIndex].classList.add('slider-dots-button--active');
+    }
+  }
+
+  const setNextSlide = () => {
+    if (activeSlideIndex < slides.length - 1) {
+      activeSlideIndex++;
+      disabledArrow();
+
+      slides[activeSlideIndex - 1].classList.remove('slider-item--active');
+      slides[activeSlideIndex].classList.add('slider-item--active');
+      dots[activeSlideIndex - 1].classList.remove('slider-dots-button--active');
+      dots[activeSlideIndex].classList.add('slider-dots-button--active');
+    }
+  }
+
+  const setSlideByDot = () => {
+    disabledArrow();
+
+    slides.forEach((slide) => {
+      slide.classList.remove('slider-item--active')
+    });
+
+    dots.forEach((dot) => {
+      dot.classList.remove('slider-dots-button--active');
+    });
+
+    slides[activeSlideIndex].classList.add('slider-item--active');
+    dots[activeSlideIndex].classList.add('slider-dots-button--active');
+  }
+
+  const setActiveSlider = (mode) => {
+    switch (mode) {
+      case 'PREV':
+        setPrevSlide();
+        break;
+      case 'NEXT':
+        setNextSlide();
+        break;
+      case 'DOTS':
+        setSlideByDot();
+        break;
+    }
+  };
+
+  sliderArrowPrev.addEventListener('click', () => {
+    setActiveSlider('PREV');
+  });
+
+  sliderArrowNext.addEventListener('click', () => {
+    setActiveSlider('NEXT');
+  });
+
+  dots.forEach((dot) => {
+    dot.addEventListener('click', () => {
+      activeSlideIndex = dot.dataset.slide
+      setActiveSlider('DOTS');
+    });
+  })
+}
+
 
