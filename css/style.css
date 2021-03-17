@@ -197,7 +197,7 @@ a {
   position: absolute;
   width: 15px;
   height: 15px;
-  background: url('../img/icons/icon-cart.svg') no-repeat 0 0;
+  background: url("../img/icons/icon-cart.svg") no-repeat 0 0;
   top: 13px;
   left: 26px;
   opacity: 0.3;
@@ -222,7 +222,7 @@ a {
   width: 14px;
   height: 16px;
   opacity: 0.3;
-  background: url('../img/icons/icon-bookmark.svg') no-repeat 0 0;
+  background: url("../img/icons/icon-bookmark.svg") no-repeat 0 0;
   top: 12px;
   left: 20px;
 }
@@ -481,7 +481,7 @@ a {
   position: absolute;
   width: 70px;
   height: 90px;
-  background: url('../img/new_catalog.png') no-repeat 0 0;
+  background: url("../img/new_catalog.png") no-repeat 0 0;
   top: -24px;
   right: 0;
 }
@@ -769,7 +769,7 @@ a {
   position: absolute;
   width: 70px;
   height: 90px;
-  background: url('../img/new_catalog.png') no-repeat 0 0;
+  background: url("../img/new_catalog.png") no-repeat 0 0;
   top: -25px;
   right: 0;
   display: none;
@@ -935,7 +935,7 @@ a {
   position: absolute;
   width: 15px;
   height: 15px;
-  background: url('../img/icons/icon-cart.svg') no-repeat 0 0;
+  background: url("../img/icons/icon-cart.svg") no-repeat 0 0;
   top: 10px;
   left: 30px;
   opacity: 0.3;
@@ -1031,6 +1031,7 @@ a {
 }
 .description p {
   margin-bottom: 0;
+  max-width: 335px;
 }
 .info-list {
   font-weight: bold;
@@ -1044,7 +1045,7 @@ a {
   width: 10px;
   height: 279px;
   position: absolute;
-  background: url('../img/line.png') no-repeat 0 0;
+  background: url("../img/line.png") no-repeat 0 0;
   right: 0;
   top: -49px;
 }
@@ -1067,7 +1068,7 @@ a {
   position: absolute;
   width: 468px;
   height: 261px;
-  background: url('../img/car-shadow.png') no-repeat 0 0;
+  background: url("../img/car-shadow.png") no-repeat 0 0;
   top: 20px;
   left: 152px;
 }
@@ -1079,7 +1080,7 @@ a {
   position: absolute;
   width: 389px;
   height: 283px;
-  background: url('../img/quarantee.png') no-repeat 0 0;
+  background: url("../img/quarantee.png") no-repeat 0 0;
   top: -3px;
   left: 238px;
 }
@@ -1163,7 +1164,7 @@ a {
   position: absolute;
   width: 25px;
   height: 2px;
-  background: url('../img/icons/line-item.svg') no-repeat 0 0;
+  background: url("../img/icons/line-item.svg") no-repeat 0 0;
   top: 50%;
   left: 0;
 }
@@ -1430,7 +1431,7 @@ a {
   position: absolute;
   width: 15px;
   height: 15px;
-  background: url('../img/icons/icon-cart.svg') no-repeat 0 0;
+  background: url("../img/icons/icon-cart.svg") no-repeat 0 0;
   top: 13px;
   left: 15px;
   opacity: 0.3;
@@ -1474,7 +1475,7 @@ a {
   position: absolute;
   width: 14px;
   height: 12px;
-  background: url('../img/icons/icon-home.svg') no-repeat 0 0;
+  background: url("../img/icons/icon-home.svg") no-repeat 0 0;
   top: 2px;
   left: 0;
 }
@@ -1483,7 +1484,7 @@ a {
   content: "";
   width: 8px;
   height: 12px;
-  background: url('../img/icons/icon-right-small.svg') no-repeat 0 0;
+  background: url("../img/icons/icon-right-small.svg") no-repeat 0 0;
   right: -25px;
   top: 6px;
 }
@@ -1875,7 +1876,7 @@ fieldset:nth-child(2) .legend-title {
   border: none;
 }
 .perforators-info {
-  background-image: url('../img/top-background.png');
+  background-image: url("../img/top-background.png");
   grid-column: 1 / -1;
   padding-bottom: 60px;
 }
@@ -1910,7 +1911,8 @@ fieldset:nth-child(2) .legend-title {
   width: 620px;
   color: var(--dark);
   top: auto;
-  bottom: 352px;
+  bottom: 348px;
+  right: 20px;
 }
 .letter fieldset {
   border: none;
@@ -2001,8 +2003,9 @@ fieldset:nth-child(2) .legend-title {
 }
 .modal-map {
   width: 943px;
-  bottom: 334px;
+  bottom: 325px;
   top: auto;
+  right: 15px;
 }
 .modal-map iframe {
   border: none;
@@ -2050,7 +2053,7 @@ fieldset:nth-child(2) .legend-title {
   position: absolute;
   top: -19px;
   left: 81px;
-  background: url('../img/icons/icon-mark.svg') no-repeat 0 0;
+  background: url("../img/icons/icon-mark.svg") no-repeat 0 0;
 }
 .bottom-area {
   display: -webkit-box;
