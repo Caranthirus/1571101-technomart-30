@@ -1062,6 +1062,7 @@ a {
   padding: 0;
   margin: 0 0 30px 0;
   position: relative;
+  max-width: 335px;
 }
 .description-delivery .title--description::after {
   content: "";
@@ -1894,11 +1895,8 @@ fieldset:nth-child(2) .legend-title {
 .modal {
   display: none;
   position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  margin: auto;
+  top: 50%;
+  left: 50%;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   -webkit-filter: drop-shadow(0 4px 20px rgba(0, 0, 0, 0.15));
@@ -1910,9 +1908,8 @@ fieldset:nth-child(2) .legend-title {
 .modal-letter {
   width: 620px;
   color: var(--dark);
-  top: auto;
-  bottom: 348px;
-  right: 20px;
+  margin-left: -318px;
+  margin-top: -218px;
 }
 .letter fieldset {
   border: none;
@@ -2004,8 +2001,8 @@ fieldset:nth-child(2) .legend-title {
 .modal-map {
   width: 943px;
   bottom: 325px;
-  top: auto;
-  right: 15px;
+  margin-left: -480px;
+  margin-top: -262px;
 }
 .modal-map iframe {
   border: none;
@@ -2031,7 +2028,8 @@ fieldset:nth-child(2) .legend-title {
 .modal-order {
   width: 620px;
   top: 300px;
-  bottom: auto;
+  margin-left: -318px;
+  margin-top: -60px;
 }
 .top-area {
   padding-top: 67px;

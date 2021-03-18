@@ -136,15 +136,12 @@ infoButtons.forEach(function (item) {
   item.addEventListener("click", function (evt) {
     evt.preventDefault();
     const id = this.getAttribute("data-tab");
-    const content = document.querySelector(
-      '.description[data-tab="' + id + '"]'
-    );
+    const content = document.querySelector(`.description[data-tab="${id}"]`);
+    console.log(content);
     const activeButton = document.querySelector(".clicked");
     const activeContent = document.querySelector(".description--active");
-
     activeButton.classList.remove("clicked");
     item.classList.add("clicked");
-
     activeContent.classList.remove("description--active");
     content.classList.add("description--active");
   });
